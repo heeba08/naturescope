@@ -510,48 +510,24 @@ window.showPage = function (pageName) {
         }
 
         function onExploreKeyDown(event) {
-            if (currentPage !== 'explore') return;
-            switch(event.code) {
-                case 'KeyW':
-                case 'ArrowUp':
-                    exploreMoveForward = true;
-                    break;
-                case 'KeyS':
-                case 'ArrowDown':
-                    exploreMoveBackward = true;
-                    break;
-                case 'KeyA':
-                case 'ArrowLeft':
-                    exploreMoveLeft = true;
-                    break;
-                case 'KeyD':
-                case 'ArrowRight':
-                    exploreMoveRight = true;
-                    break;
-            }
-        }
+    const keysToBlock = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '];
 
-        function onExploreKeyUp(event) {
-            if (currentPage !== 'explore') return;
-            switch(event.code) {
-                case 'KeyW':
-                case 'ArrowUp':
-                    exploreMoveForward = false;
-                    break;
-                case 'KeyS':
-                case 'ArrowDown':
-                    exploreMoveBackward = false;
-                    break;
-                case 'KeyA':
-                case 'ArrowLeft':
-                    exploreMoveLeft = false;
-                    break;
-                case 'KeyD':
-                case 'ArrowRight':
-                    exploreMoveRight = false;
-                    break;
-            }
-        }
+    if (keysToBlock.includes(event.key)) {
+        event.preventDefault();   // 🔥 STOP PAGE SCROLL
+    }
+
+    exploreKeys[event.key.toLowerCase()] = true;
+}
+
+       function onExploreKeyUp(event) {
+    const keysToBlock = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '];
+
+    if (keysToBlock.includes(event.key)) {
+        event.preventDefault();   // 🔥 STOP PAGE SCROLL
+    }
+
+    exploreKeys[event.key.toLowerCase()] = false;
+}
 
         function onExploreMouseDown(event) {
             exploreIsMouseDown = true;
