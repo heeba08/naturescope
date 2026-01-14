@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureScope - Explore Nature with AR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand" onclick="showPage('home')">🌿 NatureScope</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="navbar-menu" id="navMenu">
+            <a class="nav-link" onclick="showPage('home')">Home</a>
+            <a class="nav-link" onclick="showPage('explore')">Explore</a>
+            <a class="nav-link" onclick="showPage('learn')">Learn</a>
+            <a class="nav-link" onclick="showPage('quiz')">Quiz</a>
+            <a class="nav-link" onclick="showPage('scan')">Scan</a>
+            <a class="nav-link" onclick="showPage('act')">Take Action</a>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="homePage" class="page active">
+        <div class="floating-particles" id="homeParticles"></div>
+        
+        <div class="hero-section">
+            <h1 class="hero-title">🌿 NatureScope 🌿</h1>
+            <p class="hero-subtitle">Explore, Learn, and Protect Our Natural World</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card" onclick="showPage('explore')">
+                <span class="feature-icon">🌍</span>
+                <h3 class="feature-title">Explore</h3>
+                <p class="feature-description">Immerse yourself in a 3D forest environment with realistic animals</p>
+            </div>
+
+            <div class="feature-card" onclick="showPage('learn')">
+                <span class="feature-icon">📚</span>
+                <h3 class="feature-title">Learn</h3>
+                <p class="feature-description">Discover fascinating facts about species and ecosystems</p>
+            </div>
+
+            <div class="feature-card" onclick="showPage('quiz')">
+                <span class="feature-icon">🎯</span>
+                <h3 class="feature-title">Quiz</h3>
+                <p class="feature-description">Test your knowledge and earn badges</p>
+            </div>
+
+            <div class="feature-card" onclick="showPage('scan')">
+                <span class="feature-icon">📱</span>
+                <h3 class="feature-title">AR Scan</h3>
+                <p class="feature-description">Identify plants and animals using your camera</p>
+            </div>
+
+            <div class="feature-card" onclick="showPage('act')">
+                <span class="feature-icon">🌱</span>
+                <h3 class="feature-title">Take Action</h3>
+                <p class="feature-description">Complete eco-actions and make a difference</p>
+            </div>
+        </div>
+    </div>
+
+   <!-- EXPLORE PAGE -->
+<div id="explorePage" class="page">
+    <div id="exploreContent" class="page-content">
+        <h2>Explore Nature</h2>
+        <p>Explore immersive 3D forests and wildlife.</p>
+    </div>
+</div>
+
+    <!-- LEARN PAGE -->
+    <div id="learnPage" class="page">
+    <div id="learnContent" class="page-content">
+        <h2>Learn</h2>
+        <p>Learn about ecosystems and species.</p>
+    </div>
+</div>
+
+    <!-- QUIZ PAGE -->
+    <div id="quizPage" class="page">
+    <div id="quizContent" class="page-content">
+        <h2>Quiz</h2>
+        <p>Test your knowledge.</p>
+    </div>
+</div>
+
+    <!-- SCAN PAGE -->
+    <div id="scanPage" class="page">
+    <div id="scanContent" class="page-content">
+        <h2>AR Scan</h2>
+        <p>Scan plants and animals.</p>
+    </div>
+</div>
+
+    <!-- TAKE ACTION PAGE -->
+    <div id="actPage" class="page">
+    <div id="actContent" class="page-content">
+        <h2>Take Action</h2>
+        <p>Complete eco-friendly actions.</p>
+    </div>
+</div>
+</body>
+</html>
