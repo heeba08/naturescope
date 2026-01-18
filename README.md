@@ -4,7 +4,7 @@ Explore nature in AR and 3D!
 
 ## Features
 - Home page with interactive hero section
-- Explore 3D forest environment with animals
+- Explore 3D forest environment with animals and plants
 - Learn about species with cards
 - Quizzes to test knowledge
 - AR Scan for identifying plants and animals
